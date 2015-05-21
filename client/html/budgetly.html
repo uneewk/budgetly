@@ -1,0 +1,49 @@
+<head>
+  <title>budgetly</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+</head>
+
+<body>
+  {{> navigation}}
+  {{> application}}
+  {{> overlay}}
+  {{> footer}}
+</body>
+
+<template name='application'>
+  <div id='content'>
+    {{#if homeView}}
+      {{> intro}}
+    {{/if}}
+
+    {{#if budgetsView}}
+      {{> budgets}}
+    {{/if}}
+
+    {{#if helpView}}
+      {{> help}}
+    {{/if}}
+  </div>
+</template>
+
+<template name='footer'>
+  <footer>
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+            <span class="copyright text-left">Copyright &copy; eek0ut 2015</span>
+          </div>
+          <div class="col-xs-7 col-sm-8 col-md-8 col-lg-8">
+            <ul class="list-inline quicklinks text-right">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </footer>
+</template>

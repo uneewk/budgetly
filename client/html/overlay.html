@@ -1,0 +1,14 @@
+<template name='overlay'>
+  {{#if overlay}}
+    <div id='overlay' class='overlay'>
+      <div class='cover'></div>
+      <div id='panel' class='panel wrapper'>
+
+        {{#if loginForm}}
+          {{> login}}
+        {{/if}}
+
+      </div>
+    </div>
+  {{/if}}
+</template>
